@@ -12,11 +12,9 @@
             0% {
                 opacity: 1;
             }
-
             50% {
                 opacity: 0.3;
             }
-
             100% {
                 opacity: 1;
             }
@@ -28,12 +26,20 @@
 
         /* Profile Image Styling */
         .about-me-image {
-            width: 250px;
-            height: 250px;
             border-radius: 50%;
             object-fit: cover;
             margin-right: 2rem;
-            border: 4px solid #14b8a6;
+            transition: transform 0.2s;
+        }
+
+        .about-me-image:hover {
+            transform: scale(1.1);
+        }
+
+        /* Interactive touch animation */
+        .interactive:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s;
         }
     </style>
 </head>
@@ -52,43 +58,47 @@
                     <li><a href="#projects" class="text-xl hover:text-teal-400 hover-blink">Projects</a></li>
                     <li><a href="#education" class="text-xl hover:text-teal-400 hover-blink">Education</a></li>
                     <li><a href="#experience" class="text-xl hover:text-teal-400 hover-blink">Experience</a></li>
+                    <li><a href="#certifications" class="text-xl hover:text-teal-400 hover-blink">Certifications</a></li>
                     <li><a href="#contact" class="text-xl hover:text-teal-400 hover-blink">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about" class="py-24 px-8 bg-gray-800 flex flex-wrap items-center justify-center">
-        <div>
-            <img src="https://via.placeholder.com/250" alt="Vedantam Hemanth Profile" class="about-me-image">
-        </div>
-        <div>
-            <h2 class="text-4xl font-semibold text-teal-400 mb-6 hover-blink">About Me</h2>
-            <p class="max-w-3xl text-lg leading-relaxed">
-                I am Vedantam Hemanth, an AI/ML Engineer passionate about creating transformative solutions using Machine Learning, Deep Learning, and NLP. 
-                Proficient in Python, Java, and C, I specialize in deploying models with TensorFlow and PyTorch while utilizing AWS cloud services.
-            </p>
-        </div>
-    </section>
+   <!-- About Me Section -->
+<section id="about" class="py-24 px-8 bg-gray-800 flex flex-wrap items-center">
+    <div>
+        <img src="C:\Users\heman\Downloads\profilenew.jpeg"
+             alt="Vedantam Hemanth"
+             class="about-me-image"
+             style="width: 200px; height: 200px; border: 4px solid white;">
+    </div>
+    <div style="margin-left: 1rem;">
+        <h2 class="text-4xl font-semibold text-teal-400 mb-6 hover-blink interactive">About Me</h2>
+        <p class="max-w-3xl text-lg leading-relaxed interactive">
+            I am Vedantam Hemanth, an AI/ML Engineer passionate about creating transformative solutions using Machine Learning, Deep Learning, and NLP. 
+            Proficient in Python, Java, and C, I specialize in deploying models with TensorFlow and PyTorch while utilizing AWS cloud services.
+        </p>
+    </div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills" class="py-24 px-8 bg-gray-900">
         <h2 class="text-3xl font-semibold text-teal-400 mb-8 text-center hover-blink">Skills</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
-            <div class="bg-gray-800 p-6 rounded-lg hover-blink">
+            <div class="bg-gray-800 p-6 rounded-lg hover-blink interactive">
                 <h3 class="font-semibold text-xl mb-2">Programming</h3>
                 <p>Python, Java, C</p>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg hover-blink">
+            <div class="bg-gray-800 p-6 rounded-lg hover-blink interactive">
                 <h3 class="font-semibold text-xl mb-2">AI/ML Frameworks</h3>
                 <p>TensorFlow, PyTorch, Keras</p>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg hover-blink">
+            <div class="bg-gray-800 p-6 rounded-lg hover-blink interactive">
                 <h3 class="font-semibold text-xl mb-2">Data Visualization</h3>
                 <p>Matplotlib, Seaborn, Power BI</p>
             </div>
-            <div class="bg-gray-800 p-6 rounded-lg hover-blink">
+            <div class="bg-gray-800 p-6 rounded-lg hover-blink interactive">
                 <h3 class="font-semibold text-xl mb-2">Cloud Services</h3>
                 <p>AWS (EC2, S3, Lambda)</p>
             </div>
@@ -99,15 +109,15 @@
     <section id="projects" class="py-24 px-8 bg-gray-800">
         <h2 class="text-3xl font-semibold text-teal-400 mb-8 text-center hover-blink">Projects</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-gray-700 p-6 rounded-lg hover-blink">
+            <div class="bg-gray-700 p-6 rounded-lg hover-blink interactive">
                 <h3 class="font-semibold text-xl mb-2">AI Assistant</h3>
                 <p>Developed an AI chatbot leveraging NLTK for real-time NLP interactions.</p>
             </div>
-            <div class="bg-gray-700 p-6 rounded-lg hover-blink">
+            <div class="bg-gray-700 p-6 rounded-lg hover-blink interactive">
                 <h3 class="font-semibold text-xl mb-2">Movie Recommendation System</h3>
                 <p>Built a collaborative filtering recommendation engine for personalized movie suggestions.</p>
             </div>
-            <div class="bg-gray-700 p-6 rounded-lg hover-blink">
+            <div class="bg-gray-700 p-6 rounded-lg hover-blink interactive">
                 <h3 class="font-semibold text-xl mb-2">Fraud Detection</h3>
                 <p>Implemented a credit card fraud detection model achieving high accuracy using ML algorithms.</p>
             </div>
@@ -132,16 +142,36 @@
         </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-24 px-8 bg-gray-900">
+        <h2 class="text-3xl font-semibold text-teal-400 mb-8 text-center hover-blink">Certifications</h2>
+        <ul class="list-disc list-inside text-lg space-y-4 max-w-2xl mx-auto">
+            <li>Oracle AI Foundations</li>
+            <li>Oracle Generative AI Foundations</li>
+            <li>AWS Cloud Practitioner</li>
+            <li>Red Hat</li>
+            <li>Kaggle Introduction to Machine Learning</li>
+            <li>TCS Soft Skills</li>
+        </ul>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="py-24 px-8 bg-gray-900">
-        <h2 class="text-3xl font-semibold text-teal-400 mb-8 text-center hover-blink">Contact Me</h2>
+    <section id="contact" class="py-24 px-8 bg-gray-800">
+        <h2 class="text-3xl font-semibold text-teal-400 mb-8 text-center hover-blink">Contact</h2>
         <div class="text-center">
-            <p class="text-lg mb-4">Feel free to reach out for collaborations or inquiries:</p>
-            <p class="text-lg">📧 Email: <a href="mailto:hemanthvedantam@gmail.com" class="text-teal-400 hover-blink">hemanthvedantam@gmail.com</a></p>
-            <p class="text-lg mt-2">🔗 LinkedIn: <a href="https://www.linkedin.com/in/hemanth-vedantam-813455280/" target="_blank" class="text-teal-400 hover-blink">linkedin.com/in/hemanthvedantam</a></p>
-            <p class="text-lg mt-2">📍 Location: Andhra Pradesh, India</p>
+            <p class="text-lg mb-4">📞 <strong>Mobile:</strong> 8919320565</p>
+            <p class="text-lg mb-4">📧 <strong>Email:</strong> <a href="mailto:hemanthvedantam@gmail.com" class="text-teal-400 hover:text-teal-300">hemanthvedantam@gmail.com</a></p>
+            <p class="text-lg mb-4">💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hemanth-vedantam-813455280/" class="text-teal-400 hover:text-teal-300">Vedantam Hemanth</a></p>
+            <p class="text-lg mb-4">🌐 <strong>GitHub:</strong> <a href="https://github.com/hemanthvedantam" class="text-teal-400 hover:text-teal-300">hemanthvedantam</a></p>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-900 text-center">
+        <p class="text-sm text-gray-500">© 2024 Vedantam Hemanth. All rights reserved.</p>
+    </footer>
+
 </body>
 
 </html>
+
